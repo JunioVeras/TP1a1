@@ -168,6 +168,7 @@ void StableMatchLagoa::normaliza_preferencia()
     {
         this->pessoas[i].preferencias = preferencias[i];
         this->pessoas[i].id = i;
+        this->pessoas[i].contador = 0;
     }
 }
 
@@ -188,7 +189,7 @@ void StableMatchLagoa::calcula_casamento_estavel()
     {
         // cria variaveis auxiliares para conter o id da pessoa analisada nessa rodada e a bicicleta que ele tentara alugar
         int id = fila.front().id;
-        int bicicleta = fila.front().preferencias[fila.front().contador].id;
+        int bicicleta = this->pessoas[id].preferencias[this->pessoas[id].contador].id;
 
         // verifica se a bicicleta nao tem associacao
         if(this->bicicletas[bicicleta].pessoa_associada == -1)

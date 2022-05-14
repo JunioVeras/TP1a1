@@ -32,12 +32,6 @@ struct Pessoa
     int contador = 0;
 };
 
-struct elemento
-{
-    int id;
-    int rank;
-};
-
 class StableMatchLagoa
 {
     private:
